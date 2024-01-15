@@ -1,0 +1,70 @@
+Git cherry pick:
+
+git cherry-pick is powerful command that enables arbitrary Git commits 
+to be picked by reference and appended to the current working HEAD.
+Cherry picking is the act of picking a commit from a branch and applying
+to andother.
+git cherry-pick can be useful for undoing changes .
+
+For example, say commit is accidently made to wrong branch, You can 
+switch to the correct branch and cherry-pick the commit to where it 
+should belong.
+
+Use Cases:
+
+Team Collaboration:
+  Often times a team will find individual members working in or around 
+  same code.
+  Maybe a new product feature has backend and frontend component.
+  There may be some shared code between to two product sectors.
+  Maybe backend developer creates a data structure that the frontend 
+  will also need to utilize.
+  The frontend developer could use git cherry-pick to pick the commit in
+  which this hypothetical data structure was created.
+  This pick would enable the frontend developer to continue progress on 
+  their side of the project.
+
+
+Bug hotfixes:
+  When a bug is discovered it is important to deliver a fix to end users
+ as quickly as possible. For an example scenario,say a developer has
+ started work on a new feature. During that new feature development they
+ identify a pre-existing bug. The developer creates an explicit commit 
+ patching this bug. This new patch commit can be cherry-picked directly
+ to the main branch to fix the bug before it effects more users.
+
+Undoing Changes and restoring lost commits:
+ Sometimes a feature branch may go stale and not get merged into main.
+ Sometimes a pull request might get closed without merging. Git never
+ loses those commits and through commands like git log and git reflog
+ they can be found and cherry picked back to life.
+
+
+Steps to cherry-pick a commit:
+
+Assuming you want to cherry-pick a commit from 'feature' branch 
+to 'main' branch:
+
+1. Switch to the main Branch:
+	git checkout main
+
+2. Identify the commit to cherry-pick:
+	git log
+
+3.Cherry-Pick the commit:
+	git cherry-pick <commit-has>
+  <commit-has> is actual hash of the commit you want to cherry-pick
+
+4.Resolve Conflicts(if any):
+  if there are conflicts between the changes in the cherry-picked commit
+  and the current state of the target branch, Git will notify you.
+  Resolve the conflicts manually and then continue the cherry-pick prcess
+
+5.Commit the changes:
+  After resolving conflicts, commit the changes introduced by 
+  cherry-pick
+
+	git commit
+
+6.Push changes:
+	git push origin main
