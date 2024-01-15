@@ -1,0 +1,27 @@
+
+whent we try to push branch which have some content on remote which we have not pulled error msg will be displayed
+
+example:
+git push origin samnit
+To github.com:SamnitPatil9882/MainRepo.git
+ ! [rejected]        samnit -> samnit (fetch first)
+error: failed to push some refs to 'github.com:SamnitPatil9882/MainRepo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+
+1. --force
+
+	The '--force' option forcefully pushes our local changes to the reomote
+  repository, discarding any changes on the remote that you don't have locally
+  It doesn't consider the state of the remote repository, which can lead to
+  unintended consequences if other contributors have made changes to the remote
+  branch in the meantime
+
+  command:
+	git push --force origin samnit

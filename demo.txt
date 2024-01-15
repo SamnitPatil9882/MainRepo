@@ -7,4 +7,6 @@
 <th>Name</th>
 <td>56</td>
 <td>samnit</td>
+<td>14</td>
+<td>patil</td>
 </table>
