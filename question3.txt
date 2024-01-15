@@ -1,0 +1,13 @@
+To combine two commits into one, we can use an interactive rebase to 
+squash the commits together.
+
+c1 -- c2 -- c3 -- c4 
+
+we want to combine 'c2' and 'c3' into single commit.
+
+Steps:
+
+1.	git rebase -i c1^
+2.	text editor will open with list of commits.
+3.	change the word pick to squash for commits you want to combine
+4.	save and close the editor.
