@@ -1,0 +1,17 @@
+
+To delete one commit or multiple commits permanently
+we can use 'git reset'
+
+commands:
+
+command for deleting one commit
+
+	git reset --hard HEAD^
+
+command for deleting multiple commit
+	
+
+	git reset --hard HEAD~2
+
+
+

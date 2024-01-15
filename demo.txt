@@ -3,4 +3,6 @@
 <table>
 <th>Samnit</th>
 <th>Patil</th>
+<th>Roll no</th>
+<th>Name</th>
 </table>
