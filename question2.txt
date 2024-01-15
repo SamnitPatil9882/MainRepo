@@ -1,0 +1,16 @@
+
+Setting multiple remote repositories for the same project can be useful 
+in scenarios where you want to collaborate with different teams,have
+backup repository,or maintain sepereate repositories for different 
+purposes.Here's a step-by-step guide on how to set up multiple remote 
+repositories for Git project, along with a simple demo
+
+Use Case:
+
+Let's consider a use case where you have a project and want to 
+collaborate with both a main team repository(origin) and personal backup
+repository(backup).
+This setup allows to fetch changes from and push changes to both
+
+
+
