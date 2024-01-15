@@ -1,4 +1,6 @@
 <H1> Hello world <H1>
 <p> Welcome to tech world </p>
 <table>
+<th>Samnit</th>
+<th>Patil</th>
 </table>
